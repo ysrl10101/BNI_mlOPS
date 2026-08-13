@@ -1,1 +1,35 @@
-/Dataset
+# Python
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+mlops/
+.venv/
+venv/
+
+# MLflow local database
+mlflow.db
+mlflow.db-*
+mlflow.db.backup
+
+# MLflow artifacts
+mlartifacts/
+
+# Downloaded model
+model/
+
+# Backup files
+*.backup
+*.bak
+
+# IDE
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary
+*.tmp
+
+get-pip.py

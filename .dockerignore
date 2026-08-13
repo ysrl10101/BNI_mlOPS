@@ -1,0 +1,10 @@
+.git
+.dvc
+mlops
+data
+__pycache__
+*.pyc
+*.pptx
+*.db
+*.db-journal
+.env

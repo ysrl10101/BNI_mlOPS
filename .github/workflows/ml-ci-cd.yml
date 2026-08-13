@@ -1,0 +1,29 @@
+name: ml-ci-cd
+
+on:
+  push:
+
+jobs:
+  test-and-train:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Validate data
+        run: python validate_data.py
+
+      - name: Train model
+        run: python train.py 200 8
+        
+      - name: Cek Model Gate
+        run: python check_model_gate.py $(cat auc.txt)
